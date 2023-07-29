@@ -1,8 +1,6 @@
-from .realt import ParsRealt
+from realt import ParsRealt
 
-import telebot
-
-bot = telebot.TeleBot('6022929810:AAGNLMI8AIbOZ_5Iy-qf45Mf92pgyGMWZgU')
+from constants import bot
 
 
 @bot.message_handler(commands=["start"])
