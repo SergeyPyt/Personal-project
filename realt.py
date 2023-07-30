@@ -8,7 +8,7 @@ from constants import url
 
 
 class ParsRealt:
-    def __init__(self, url: str, values=int(input("Введите количество комнат: "))):
+    def __init__(self, url: str, values: int):
         """url is a link, values is the number of rooms"""
 
         self.url = url
@@ -73,14 +73,14 @@ class ParsRealt:
                                           f'//*[@id="__next"]/div[1]/div[1]/main/div/div/div/div/div[1]/div[{div_element}]/div[1]/div/div/div/div/div/div/a')
             for l in links:
                 links_list.append(l.get_attribute('href'))
-            print(links_list)
-    pass
+            return links_list
 
-pars_0 = ParsRealt(url=url)
-pars_0.parse()
-pars_0.number_of_rooms()
-pars_0.number_of_pages()
-pars_0.apartment_links()
+
+# pars_0 = ParsRealt(url, 1)
+# pars_0.parse()
+# pars_0.number_of_rooms()
+# pars_0.number_of_pages()
+# pars_0.apartment_links()
 
 
 """Можно сделать метод для вывода хедерсов сайта, или опшн запрос"""
